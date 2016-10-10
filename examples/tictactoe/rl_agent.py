@@ -3,7 +3,7 @@ import numpy as np
 
 
 '''Reinforcement learning agent wrapper around a Keras model. After training a Qlearning4k agent against an expert agent,
-simply initialize an RL_Agent instance using the Qlearning4k agent's model.
+simply initialize an RLAgent instance using the Qlearning4k agent's model.
 '''
 
 
