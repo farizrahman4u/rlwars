@@ -4,7 +4,11 @@ Framework for deploying reinforcement learning agents in multiplayer games
 
 **Installation:**
 
-```sudo pip install git+ssh://github.com/farizrahman4u/rlwars.git```
+```shell
+git clone https://www.github.com/farizrahman4u/rlwars.git
+cd rlwars
+python setup.py install
+```
 
 
 **Requirements:**
