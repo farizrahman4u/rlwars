@@ -7,7 +7,7 @@ simply initialize an RL_Agent instance using the Qlearning4k agent's model.
 '''
 
 
-# Note :  RL_Agent plays X by default. To switch this, set X = False
+# Note :  RLAgent plays X by default. To switch this, set X = False
 
 
 class RLAgent(RandomAgent):
