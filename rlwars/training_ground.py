@@ -7,6 +7,7 @@ This is where Reinforcement learning agents will train against hard coded agents
 
 from qlearning4k.games.game import Game
 
+
 class TrainingGround(Game):
 
 
@@ -53,7 +54,7 @@ class TrainingGround(Game):
 		if not self.is_over():
 			return False
 		else:
-			return self.game.winner() == 0
+			return not self.game.winner()
 
 	def get_possible_actions(self):
 		return self.game.get_possible_actions(0)

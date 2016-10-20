@@ -1,6 +1,8 @@
 from rlwars import MultiPlayerGame
 import numpy as np
 
+
+
 class TicTacToe(MultiPlayerGame):
 	'''Classic 3 x 3 TicTacToe
 	Blank boxes are -1
@@ -31,7 +33,15 @@ class TicTacToe(MultiPlayerGame):
 			return
 		self.grid[x, y] = 1 if self.X == self._current_player else 0
 		super(TicTacToe, self).play(action)
-
+		'''
+		print(self.get_state())
+		import matplotlib.pyplot as plt
+		plt.imshow(self.get_state(), interpolation='none')
+		global i
+		plt.savefig("images/" + self.name + str(i) + ".png")
+		i += 1
+		raw_input('press any key')
+		'''
 	def is_over(self):
 		if not np.any(self.grid == -1):
 			# Game is over for sure if no blank spaces left
@@ -73,7 +83,7 @@ class TicTacToe(MultiPlayerGame):
 			return [0, 0]
 
 	def get_state(self):
-		return self.grid
+		return self.grid.copy()
 
 	def get_possible_actions(self, player=None):
 		return [i for i in range(9) if self.grid[i / 3, i % 3] == -1]
