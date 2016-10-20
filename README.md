@@ -21,5 +21,5 @@ python setup.py install
 
 ```shell
 cd rlwars/examples/tictactoe
-python run.py
+python play.py
 ```
