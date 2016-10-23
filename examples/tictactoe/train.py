@@ -39,7 +39,7 @@ def filepath(f):
 weight_file = filepath('weights.dat')
 if train:
 	# train
-	agent.train(training_ground, nb_epoch=100000, epsilon=0.1, gamma=0.9)
+	q_agent.train(training_ground, nb_epoch=100000, epsilon=0.1, gamma=0.9)
 	model.save_weights(weight_file)
 else:
 	# load pre-trained weights
@@ -49,7 +49,7 @@ else:
 	model.load_weights(weight_file)
 
 # Reduce error rate of expert agent to 10%
-expert_agent.error=0.1
+expert_agent.error = 0.1
 
 # test
-agent.play(training_ground, nb_epoch=10, visualize=True)
+q_agent.play(training_ground, nb_epoch=10, visualize=True)
